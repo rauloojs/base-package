@@ -119,7 +119,7 @@ if (isProduction) {
         // https://github.com/webpack/css-loader/issues/232#issuecomment-240449998
         // 'css-loader?sourceMap',
         'css-loader',
-        'postcss-loader',
+        'postcss-loader?sourceMap',
         'sass-loader?sourceMap',
       ],
     }
@@ -130,7 +130,7 @@ module.exports = {
   devtool: isProduction ? false : 'source-map',
   context: jsSourcePath,
   entry: {
-    js: './index.js',
+    js: './main.js',
   },
   output: {
     path: buildPath,
