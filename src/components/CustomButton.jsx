@@ -5,6 +5,10 @@ import Button from 'grommet/components/Button'
 
 
 class CustomButton extends React.Component {
+  static propTypes = {
+    label: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
+  }
   render () {
     let { label, onClick } = this.props
 
@@ -12,11 +16,6 @@ class CustomButton extends React.Component {
       <Button label={label} onClick={onClick.bind(this)} />
     )
   }
-}
-
-CustomButton.propTypes = {
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
 }
 
 export default CustomButton
